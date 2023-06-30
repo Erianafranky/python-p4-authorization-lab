@@ -114,8 +114,6 @@ class MemberOnlyArticle(Resource):
 
         if article:
             return make_response(article.to_dict(), 200)
-        else:
-            return {'message': 'Article not found'}, 404
 
 api.add_resource(ClearSession, '/clear', endpoint='clear')
 api.add_resource(IndexArticle, '/articles', endpoint='article_list')
